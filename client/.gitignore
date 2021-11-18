@@ -11,6 +11,7 @@
 # production
 /build
 build
+src/hooks/_auth.hook.js
 
 # misc
 .DS_Store
