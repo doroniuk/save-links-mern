@@ -1,0 +1,31 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": ["airbnb-base", "prettier"],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "strict": "off",
+    "no-plusplus": "off",
+    "func-names": "off",
+    "no-use-before-define": ["error", { "functions": false, "classes": false }],
+    "no-console": "off",
+    "no-restricted-syntax": "off",
+    "yoda": "off",
+    "prefer-const": "off",
+    "guard-for-in": "off",
+    "no-unneeded-ternary": "off",
+    "no-func-assign": "off",
+    "no-param-reassign": "off",
+    "no-useless-return": "off",
+    "no-underscore-dangle": "off",
+    "max-classes-per-file": "off",
+    "prefer-template": "off",
+    "consistent-return": "off"
+  }
+}

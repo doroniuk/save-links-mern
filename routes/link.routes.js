@@ -1,8 +1,9 @@
 const { Router } = require("express");
+const { nanoid } = require("nanoid");
 const config = require("config");
-const shortid = require("shortid");
 const Link = require("../models/Link");
 const auth = require("../middleware/auth.middleware");
+
 const router = Router();
 
 router.post("/generate", auth, async (req, res) => {
@@ -10,7 +11,7 @@ router.post("/generate", auth, async (req, res) => {
     const baseUrl = config.get("baseUrl");
     const { from } = req.body;
 
-    const code = shortid.generate();
+    const code = nanoid();
 
     const existing = await Link.findOne({ from, owner: req.user.userId });
 
