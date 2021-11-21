@@ -1,6 +1,0 @@
-{
-  "port": 80,
-  "jwtSecret": "something",
-  "mongoUri": "mongodb+srv://Vladyslav:1234abc@cluster0.2xx5b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-  "baseUrl": "https://save-links-mern.herokuapp.com"
-}
