@@ -74,7 +74,9 @@ router.post(
         return res.status(400).json({ message: "Неверный пароль, попробуйте снова" });
       }
 
-      const token = jwt.sign({ userId: user.id }, config.get("jwtSecret"), { expiresIn: "1h" });
+      const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET || config.get("jwtSecret"), {
+        expiresIn: "1h",
+      });
 
       res.json({ token, userId: user.id });
     } catch (e) {
